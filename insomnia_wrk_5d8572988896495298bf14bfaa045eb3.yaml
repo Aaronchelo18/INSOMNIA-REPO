@@ -1,189 +1,12 @@
 type: collection.insomnia.rest/5.0
 schema_version: "5.1"
-name: login-setup
+name: PROYECTO-INTEGRADO
 meta:
   id: wrk_5d8572988896495298bf14bfaa045eb3
   created: 1757091681929
-  modified: 1771256923375
+  modified: 1771831417872
   description: ""
 collection:
-  - name: MODULOS{id_persona}
-    meta:
-      id: fld_71f6af7205ad4448a6e555be5a4df0de
-      created: 1754600736299
-      modified: 1771831233127
-      sortKey: -1754600736299
-      description: ""
-    children:
-      - url: http://localhost:5017/api/config/setup/modulos
-        name: MOSTRAR-MODULES
-        meta:
-          id: req_7db13972c6734264bd89b651598be037
-          created: 1754600739835
-          modified: 1770221209740
-          isPrivate: false
-          description: ""
-          sortKey: -1754600739835
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:5017/api/config/setup/modulos
-        name: CREAR-MODULES
-        meta:
-          id: req_f9a5dcae103b4dfd848f53e2bc1147c8
-          created: 1754600816725
-          modified: 1764981430817
-          isPrivate: false
-          description: ""
-          sortKey: -1754600739935
-        method: POST
-        body:
-          mimeType: application/json
-          text: |
-            {
-              "id_parent": 4,
-              "nombre": "Gestión de Usuarios",
-              "nivel": 0,
-              "url": "/usuarios",
-              "imagen": "icono-usuarios.png",
-              "estado": "1"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:5017/api/config/setup/modulos/id
-        name: ACTUALIZAR-MODULES
-        meta:
-          id: req_133fe83a27ea4209b13e274ad83142da
-          created: 1754600844211
-          modified: 1764981430759
-          isPrivate: false
-          description: ""
-          sortKey: -1754600844211
-        method: PUT
-        body:
-          mimeType: application/json
-          text: |
-            {
-              "id_parent": 4,
-              "nombre": "Gestión de Usuarios",
-              "nivel": 4,
-              "url": "/usuarios",
-              "imagen": "icono-usuarios.png",
-              "estado": "1"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:5017/api/config/setup/modulos/id
-        name: ELIMINAR-MODULES
-        meta:
-          id: req_590dbe224bac46fda2ae40efefb22f49
-          created: 1754600880806
-          modified: 1764981430782
-          isPrivate: false
-          description: ""
-          sortKey: -1754600880806
-        method: DELETE
-        headers:
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:5017/api/config/setup/modulos/46
-        name: PATCH-MODULES
-        meta:
-          id: req_de15c9d4f1d74924b6b362c7e66f15b7
-          created: 1754600901760
-          modified: 1764981430812
-          isPrivate: false
-          description: ""
-          sortKey: -1754600901760
-        method: PATCH
-        body:
-          mimeType: application/json
-          text: |
-            {
-              "nivel": 2,
-              "estado": "0"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-  - name: ACCESS_SETUP
-    meta:
-      id: fld_83e3aa520ade445694b312f7282b9502
-      created: 1754603814790
-      modified: 1770741450491
-      sortKey: -1754603814790
-      description: ""
-    children:
-      - url: http://localhost:5017/api/config/setup/modulos/con-detalles
-        name: MOSTRAR-ACCESS_SETUP
-        meta:
-          id: req_2c42b54f52284875b90b556db0fe8926
-          created: 1754603828024
-          modified: 1764982527554
-          isPrivate: false
-          description: ""
-          sortKey: -1754603828024
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/11.4.0
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
   - name: HIERARCHY-MODULES
     meta:
       id: fld_147c2b5f85a249efb90dd130e9877af3
@@ -192,12 +15,12 @@ collection:
       sortKey: -1754606630057
       description: ""
     children:
-      - url: http://localhost:5017/api/config/setup/modulos/jerarquia/tree
+      - url: http://localhost:5017/api/application-management/modules/jerarquia/tree
         name: MOSTRAR-HIERARCHY_MODULES
         meta:
           id: req_8e80499985f344629863faa05758c759
           created: 1754606633108
-          modified: 1771542241604
+          modified: 1772152009686
           isPrivate: false
           description: ""
           sortKey: -1754606633108
@@ -205,6 +28,9 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/11.4.0
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb2RlNS1hcGkiLCJhdWQiOiJjb2RlNS1mcm9udCIsInN1YiI6MTQ2NSwiaWF0IjoxNzcyMTUyMDAxLCJleHAiOjE3NzIxNTMyMDEsInVzZXJfY29udGV4dCI6eyJwcm9maWxlIjp7ImlkX3BlcnNvbmEiOjE0NjUsIm5vbWJyZXMiOiJKT1pFRiBBQVJcdTAwZDNOIiwiYXBlbGxpZG9zIjoiTFx1MDBkM1BFWiBEXHUwMGNkQVoiLCJjb3JyZW8iOiJqb3plZi5sb3BlekB1cGV1LmVkdS5wZSIsImNvZGlnbyI6IjIwMjIxMDQzOSJ9LCJzZWN1cml0eSI6eyJyb2xlc19pZHMiOlsyLDNdLCJyb2xlc19uYW1lcyI6WyJBTFVNTk8iLCJBRE1JTiJdfSwibmF2aWdhdGlvbiI6W3siaWRfbW9kdWxvIjoxLCJpZF9wYXJlbnQiOjAsIm5pdmVsIjowLCJub21icmUiOiJHRVNUSVx1MDBkM04gREUgQVBMSUNBQ0lPTkVTIiwidXJsIjoiL2FwcC9hcHBsaWNhdGlvbi1tYW5hZ2VtZW50IiwiaW1hZ2VuIjoibWRpOnR1bmUiLCJlc3RhZG8iOiIxIn0seyJpZF9tb2R1bG8iOjIsImlkX3BhcmVudCI6MCwibml2ZWwiOjAsIm5vbWJyZSI6IlBSQUNUSUNBUyBQUkVQUk9GRVNJT05BTEVTIiwidXJsIjoiZ2FwcC9wcHAvc2V0dXAiLCJpbWFnZW4iOiJtZGk6aGFuZHNoYWtlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjozNiwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiVklOQ1VMQUNJXHUwMGQzTiBDT04gRUwgTUVESU8iLCJ1cmwiOiJnYXBwL3ZjbS9zZXR1cCIsImltYWdlbiI6Im1kaTpob3BlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjo4MSwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiR0VTVElcdTAwZDNOIERFIElOVkVOVEFSSU9TIiwidXJsIjoiZ2FwcC9nZXN0aW9uIiwiaW1hZ2VuIjoibWRpOnJlcG9ydC10cmVlIiwiZXN0YWRvIjoiMSJ9XX19.57jb2mYN-mdRIpoNf_Crj-BSxOP5X8-uisvwJTPtCyM
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -213,20 +39,20 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: TREE_STRUCTURE
+  - name: ARBOL-SIDEBAR
     meta:
       id: fld_d76e50c11e854559ad59412911f6f670
       created: 1754607142600
-      modified: 1770741450491
+      modified: 1772151836585
       sortKey: -1754607142600
       description: ""
     children:
-      - url: http://localhost:5017/api/config/setup/modulos/arbol
+      - url: http://localhost:5017/api/application-management/modules/arbol
         name: MOSTRAR-TREE_STRUCTURE
         meta:
           id: req_a8a0a66e16e449c89f59813704218131
           created: 1754607145497
-          modified: 1771542230031
+          modified: 1772151803923
           isPrivate: false
           description: ""
           sortKey: -1754607145497
@@ -234,6 +60,9 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/11.4.0
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb2RlNS1hcGkiLCJhdWQiOiJjb2RlNS1mcm9udCIsInN1YiI6MTQ2NSwiaWF0IjoxNzcyMTUxNjUwLCJleHAiOjE3NzIxNTI4NTAsInVzZXJfY29udGV4dCI6eyJwcm9maWxlIjp7ImlkX3BlcnNvbmEiOjE0NjUsIm5vbWJyZXMiOiJKT1pFRiBBQVJcdTAwZDNOIiwiYXBlbGxpZG9zIjoiTFx1MDBkM1BFWiBEXHUwMGNkQVoiLCJjb3JyZW8iOiJqb3plZi5sb3BlekB1cGV1LmVkdS5wZSIsImNvZGlnbyI6IjIwMjIxMDQzOSJ9LCJzZWN1cml0eSI6eyJyb2xlc19pZHMiOlsyLDNdLCJyb2xlc19uYW1lcyI6WyJBTFVNTk8iLCJBRE1JTiJdfSwibmF2aWdhdGlvbiI6W3siaWRfbW9kdWxvIjoxLCJpZF9wYXJlbnQiOjAsIm5pdmVsIjowLCJub21icmUiOiJHRVNUSVx1MDBkM04gREUgQVBMSUNBQ0lPTkVTIiwidXJsIjoiL2FwcC9hcHBsaWNhdGlvbi1tYW5hZ2VtZW50IiwiaW1hZ2VuIjoibWRpOnR1bmUiLCJlc3RhZG8iOiIxIn0seyJpZF9tb2R1bG8iOjIsImlkX3BhcmVudCI6MCwibml2ZWwiOjAsIm5vbWJyZSI6IlBSQUNUSUNBUyBQUkVQUk9GRVNJT05BTEVTIiwidXJsIjoiZ2FwcC9wcHAvc2V0dXAiLCJpbWFnZW4iOiJtZGk6aGFuZHNoYWtlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjozNiwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiVklOQ1VMQUNJXHUwMGQzTiBDT04gRUwgTUVESU8iLCJ1cmwiOiJnYXBwL3ZjbS9zZXR1cCIsImltYWdlbiI6Im1kaTpob3BlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjo4MSwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiR0VTVElcdTAwZDNOIERFIElOVkVOVEFSSU9TIiwidXJsIjoiZ2FwcC9nZXN0aW9uIiwiaW1hZ2VuIjoibWRpOnJlcG9ydC10cmVlIiwiZXN0YWRvIjoiMSJ9XX19.ELbbAilyGPx1khn-5j6xO045CjcmAFlD2bKC-4RcGAE
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -242,14 +71,38 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: MODULOS-MANAGEMENT
+  - name: MODULOS-MANAGEMENT-CRUD_COMPLETO
     meta:
       id: fld_9b612d9a056e47cd83dffdc0f077b11a
       created: 1771279220514
-      modified: 1771817329001
+      modified: 1772062782290
       sortKey: -1771279220514
       description: ""
     children:
+      - url: http://localhost:5017/api/application-management/modules?id_persona=1465
+        name: MOSTRAR-MODULOS_ID_PERSONA
+        meta:
+          id: req_7db13972c6734264bd89b651598be037
+          created: 1754600739835
+          modified: 1772152044736
+          isPrivate: false
+          description: ""
+          sortKey: -1771818931606
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        authentication:
+          type: bearer
+          token: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
       - url: http://localhost:5017/api/application-management/modules/store-basic
         name: CREAR-MODULOS
         meta:
@@ -286,11 +139,11 @@ collection:
             store: true
           rebuildPath: true
       - url: http://localhost:5017/api/application-management/modules/admin-list
-        name: MOSTRAR-MODULOS
+        name: MOSTRAR-MODULOS{dentro_del_contenedor}
         meta:
           id: req_cad1c86c7d044931aa62db0e4df26c81
           created: 1771818918145
-          modified: 1771818934933
+          modified: 1772123790156
           isPrivate: false
           description: ""
           sortKey: -1771818918145
@@ -300,6 +153,9 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb2RlNS1hcGkiLCJhdWQiOiJjb2RlNS1mcm9udCIsInN1YiI6MTQ2NSwiaWF0IjoxNzcyMTIzNzc5LCJleHAiOjE3NzIxMjM4MzksInVzZXJfY29udGV4dCI6eyJwcm9maWxlIjp7ImlkX3BlcnNvbmEiOjE0NjUsIm5vbWJyZXMiOiJKT1pFRiBBQVJcdTAwZDNOIiwiYXBlbGxpZG9zIjoiTFx1MDBkM1BFWiBEXHUwMGNkQVoiLCJjb3JyZW8iOiJqb3plZi5sb3BlekB1cGV1LmVkdS5wZSIsImNvZGlnbyI6IjIwMjIxMDQzOSJ9LCJzZWN1cml0eSI6eyJyb2xlc19pZHMiOlsyLDNdLCJyb2xlc19uYW1lcyI6WyJBTFVNTk8iLCJBRE1JTiJdfSwibmF2aWdhdGlvbiI6W3siaWRfbW9kdWxvIjoxLCJpZF9wYXJlbnQiOjAsIm5pdmVsIjowLCJub21icmUiOiJHRVNUSVx1MDBkM04gREUgQVBMSUNBQ0lPTkVTIiwidXJsIjoiL2FwcC9hcHBsaWNhdGlvbi1tYW5hZ2VtZW50IiwiaW1hZ2VuIjoibWRpOnR1bmUiLCJlc3RhZG8iOiIxIn0seyJpZF9tb2R1bG8iOjIsImlkX3BhcmVudCI6MCwibml2ZWwiOjAsIm5vbWJyZSI6IlBSQUNUSUNBUyBQUkVQUk9GRVNJT05BTEVTIiwidXJsIjoiZ2FwcC9wcHAvc2V0dXAiLCJpbWFnZW4iOiJtZGk6aGFuZHNoYWtlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjozNiwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiVklOQ1VMQUNJXHUwMGQzTiBDT04gRUwgTUVESU8iLCJ1cmwiOiJnYXBwL3ZjbS9zZXR1cCIsImltYWdlbiI6Im1kaTpob3BlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjo4MSwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiR0VTVElcdTAwZDNOIERFIElOVkVOVEFSSU9TIiwidXJsIjoiZ2FwcC9nZXN0aW9uIiwiaW1hZ2VuIjoibWRpOnJlcG9ydC10cmVlIiwiZXN0YWRvIjoiMSJ9XX19.nQh7yheHantxRQ43-KhYzlq6X65wzTfZHQyNlwO293M
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -395,20 +251,20 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: USUARIOS
+  - name: ACCESOS DE USUARIOS
     meta:
       id: fld_6d90a0238e5841a9a19cd6a863f4b9d7
       created: 1771279296930
-      modified: 1771279296930
+      modified: 1772062660481
       sortKey: -1771279296930
       description: ""
     children:
-      - url: http://localhost:5017/api/iam/user-access/search?q=JOZEF
+      - url: http://localhost:5017/api/application-management/modules?id_persona=1465
         name: MOSTRAR-USUARIOS
         meta:
           id: req_cd1ed52f3bb74621a512a76089a9e231
           created: 1771279299435
-          modified: 1771279332671
+          modified: 1772123735101
           isPrivate: false
           description: ""
           sortKey: -1771279299435
@@ -418,6 +274,9 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb2RlNS1hcGkiLCJhdWQiOiJjb2RlNS1mcm9udCIsInN1YiI6MTQ2NSwiaWF0IjoxNzcyMTIzNjg0LCJleHAiOjE3NzIxMjM3NDQsInVzZXJfY29udGV4dCI6eyJwcm9maWxlIjp7ImlkX3BlcnNvbmEiOjE0NjUsIm5vbWJyZXMiOiJKT1pFRiBBQVJcdTAwZDNOIiwiYXBlbGxpZG9zIjoiTFx1MDBkM1BFWiBEXHUwMGNkQVoiLCJjb3JyZW8iOiJqb3plZi5sb3BlekB1cGV1LmVkdS5wZSIsImNvZGlnbyI6IjIwMjIxMDQzOSJ9LCJzZWN1cml0eSI6eyJyb2xlc19pZHMiOlsyLDNdLCJyb2xlc19uYW1lcyI6WyJBTFVNTk8iLCJBRE1JTiJdfSwibmF2aWdhdGlvbiI6W3siaWRfbW9kdWxvIjoxLCJpZF9wYXJlbnQiOjAsIm5pdmVsIjowLCJub21icmUiOiJHRVNUSVx1MDBkM04gREUgQVBMSUNBQ0lPTkVTIiwidXJsIjoiL2FwcC9hcHBsaWNhdGlvbi1tYW5hZ2VtZW50IiwiaW1hZ2VuIjoibWRpOnR1bmUiLCJlc3RhZG8iOiIxIn0seyJpZF9tb2R1bG8iOjIsImlkX3BhcmVudCI6MCwibml2ZWwiOjAsIm5vbWJyZSI6IlBSQUNUSUNBUyBQUkVQUk9GRVNJT05BTEVTIiwidXJsIjoiZ2FwcC9wcHAvc2V0dXAiLCJpbWFnZW4iOiJtZGk6aGFuZHNoYWtlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjozNiwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiVklOQ1VMQUNJXHUwMGQzTiBDT04gRUwgTUVESU8iLCJ1cmwiOiJnYXBwL3ZjbS9zZXR1cCIsImltYWdlbiI6Im1kaTpob3BlIiwiZXN0YWRvIjoiMSJ9LHsiaWRfbW9kdWxvIjo4MSwiaWRfcGFyZW50IjowLCJuaXZlbCI6MCwibm9tYnJlIjoiR0VTVElcdTAwZDNOIERFIElOVkVOVEFSSU9TIiwidXJsIjoiZ2FwcC9nZXN0aW9uIiwiaW1hZ2VuIjoibWRpOnJlcG9ydC10cmVlIiwiZXN0YWRvIjoiMSJ9XX19.OjnH59MNGupPW5Oa73_CQMcPyoIgBANzJ66Y_ssJji0
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -703,14 +562,88 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: LOGIN
+    meta:
+      id: fld_48600a94da584a798bf2ebc9a49fbb22
+      created: 1772059713172
+      modified: 1772059713172
+      sortKey: -1772059713172
+      description: ""
+    children:
+      - url: http://localhost:5017/api/iam/role-assignment/1468/roles
+        name: LOGIN-ROLES
+        meta:
+          id: req_0f18da9d353a4e208e8913991486556f
+          created: 1771975889864
+          modified: 1772062198333
+          isPrivate: false
+          description: ""
+          sortKey: -1772059722184
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5017/api/auth/login-password
+        name: ACCESS_TOKEN
+        meta:
+          id: req_3dc412ca2c6846168315d04af7a35352
+          created: 1772058410307
+          modified: 1772124320099
+          isPrivate: false
+          description: ""
+          sortKey: -1772059722084
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "correo": "jozef.lopez",
+              "password": "202210439"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            description: ""
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Key
+            value: application/json
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_46090de6669e655a363d0a652134a74db7fa43f6
     created: 1764981430909
-    modified: 1770394052052
+    modified: 1772059686476
   cookies:
-    - id: 89a0676d-e84c-4c23-a462-9b5b1b4501a1
+    - id: 9aaf841f-dfe3-426a-9487-993f1f3de1a5
       key: __Host-GAPS
       value: 1:MTJowqVRmQE7EBv9-9lZ0U6xf3Fc5w:Z4XW-4INO9HWE18_
       domain: localhost
@@ -719,6 +652,22 @@ cookieJar:
       httpOnly: true
       extensions:
         - Priority=HIGH
+      hostOnly: true
+    - id: 3eabaf32-7f2f-4c3e-ba02-494ab7351dd4
+      key: XSRF-TOKEN
+      value: eyJpdiI6InRURUcwRjNhc2xFdXl2MFNoUDNObkE9PSIsInZhbHVlIjoiV2FtUTVicWFpc28rMEpnNithcEthUFJVaHA2K1VLQXNyOHdoSHRPMFBzZVpxYVliZ1kvM0xncTQ2NlhnTlcyczNFNUNvRjB1bGF5UnpXUHZoMjlDQW9lQTUxRkRCZ2hSM2QxTFhjOXJ1elYwVjgzODdkZmkrazd3K1ZrNDBQQVIiLCJtYWMiOiJiMTQ2YTliNTMzZWY1YTUzOGE5ZmM5YjUyOGUyOWNkNjRjYzQwNTJiODgzMmMyZTI1M2UwYzVjNDE3ODgyYWI2IiwidGFnIjoiIn0%3D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: false
+      hostOnly: true
+    - id: 936b565d-fdc3-4447-bb89-05a0ea9a903e
+      key: laravel_session
+      value: eyJpdiI6ImJuWGJsMGxpWkRicFNNL3hMbFJHNVE9PSIsInZhbHVlIjoiWG56V3lNSG9rb1M3WnhQdE9iMUNhL1BIMWNqbTk5WHVmaGgrN1hTbjdSYVJUWjZOYmx6cGl5T3d0a3hKRW8zVzdhTktNam5VdnpsOHYvblowcDFrM3dwMTVSNUVXUGxDZmdLaXNhVlVCQldoNUg1ejhqK09FVXdidXJUYS90Y3IiLCJtYWMiOiIyNzVkNzA0YjE1ZjE3NGZkZWE2ZDY5NWJiNmE0Y2MxYjBiZWU4NTdmOTRjNDIxMTUzMTQ0Y2E3MDNiMjVjNGUzIiwidGFnIjoiIn0%3D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
       hostOnly: true
 environments:
   name: Base Environment
